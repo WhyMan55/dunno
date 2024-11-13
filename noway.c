@@ -157,6 +157,6 @@ void t4(char* str) {
 int t5() {
 	char a[N];
 	fgets(a, sizeof(a), stdin);
-	t4(input);
+	t4(a);
 	printf("%s", input);
 }
