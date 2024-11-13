@@ -132,7 +132,7 @@ int t3()
 	}
 }
 
-void remove_first_letter(char* str) {
+void t4(char* str) {
 		char result[N] = { 0 };
 		int i = 0, j = 0;
 		int inword = 0; 
@@ -155,8 +155,8 @@ void remove_first_letter(char* str) {
 		strcpy(str, result);
 	}
 int t5() {
-	char input[N];
-	fgets(input, sizeof(input), stdin);
-	remove_first_letter(input);
+	char a[N];
+	fgets(a, sizeof(a), stdin);
+	t4(input);
 	printf("%s", input);
 }
