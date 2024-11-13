@@ -5,7 +5,7 @@
 
 void main()
 {
-	t2();
+	t5();
 }
 
 int t1()
@@ -130,4 +130,33 @@ int t3()
 			printf(" %d \n", a[i].made_in);
 		}
 	}
+}
+
+void remove_first_letter(char* str) {
+		char result[N] = { 0 };
+		int i = 0, j = 0;
+		int inword = 0; 
+		while (str[i] != '\0') {
+			if (isspace(str[i]) || str[i] == '\n') {
+				result[j++] = str[i];
+				inword = 0;
+			}
+			else {
+				if (!inword) {
+					inword = 1;
+				}
+				else {
+					result[j++] = str[i];
+				}
+			}
+			i++;
+		}
+		result[j] = '\0';
+		strcpy(str, result);
+	}
+int t5() {
+	char input[N];
+	fgets(input, sizeof(input), stdin);
+	remove_first_letter(input);
+	printf("%s", input);
 }
