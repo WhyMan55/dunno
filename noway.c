@@ -158,5 +158,5 @@ int t5() {
 	char a[N];
 	fgets(a, sizeof(a), stdin);
 	t4(a);
-	printf("%s", input);
+	printf("%s", a);
 }
